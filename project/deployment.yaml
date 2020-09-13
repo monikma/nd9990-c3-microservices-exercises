@@ -17,9 +17,23 @@ spec:
       containers:
         - name: udagram-feed
           image: monikma/udagram-feed
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
           ports:
             - containerPort: 80
         - name: udagram-user
           image: monikma/udagram-user
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
           ports:
             - containerPort: 80
