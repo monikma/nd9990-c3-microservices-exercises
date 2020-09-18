@@ -1,6 +1,4 @@
-/.idea/workspace.xml
 /project/set_env.sh
-/.idea/modules.xml
-/.idea/nd9990-c3-microservices-exercises.iml
-/.idea/vcs.xml
 /project/envfile
+/.idea/**
+/project/node_modules/**
