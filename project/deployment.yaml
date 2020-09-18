@@ -25,7 +25,7 @@ spec:
               memory: "1024Mi"
               cpu: "500m"
           ports:
-            - containerPort: 80
+            - containerPort: 82
           env:
             - name: POSTGRES_USERNAME
               value: "udagrammonikadev"
@@ -61,7 +61,7 @@ spec:
               memory: "1024Mi"
               cpu: "500m"
           ports:
-            - containerPort: 80
+            - containerPort: 81
           env:
             - name: POSTGRES_USERNAME
               value: "udagrammonikadev"
