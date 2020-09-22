@@ -10,3 +10,7 @@ router.get('/', async (req: Request, res: Response) => {
 });
 
 export const IndexRouter: Router = router;
+
+router.get('/health', async (req: Request, res: Response) => {
+  res.send("OK");
+});

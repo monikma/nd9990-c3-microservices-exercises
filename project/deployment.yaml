@@ -53,6 +53,12 @@ spec:
               value: "http://localhost:8100"
             - name: PORT
               value: "8080"
+          livenessProbe:
+            httpGet:
+              path: /api/v0/health
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 3
         - name: udagram-user
           image: monikma/udagram-user
           resources:
@@ -91,3 +97,9 @@ spec:
               value: "http://localhost:8100"
             - name: PORT
               value: "8081"
+          livenessProbe:
+            httpGet:
+              path: /api/v0/health
+              port: 8081
+            initialDelaySeconds: 3
+            periodSeconds: 3
