@@ -1,12 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: udagram
   labels:
-    run: udagram
+    app: udagram
+  name: udagram-svc
+  namespace: default
+  selfLink: /api/v1/namespaces/default/services/udagram-svc
 spec:
   ports:
-    - port: 80
+    - port: 8080
       protocol: TCP
+      targetPort: 8080
   selector:
-    run: udagram
+    app: udagram
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
