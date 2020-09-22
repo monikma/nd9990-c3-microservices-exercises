@@ -11,8 +11,12 @@ router.get('/');
 
 router.get('/:id', async (req: Request, res: Response) => {
   const {id} = req.params;
-  console.debug(`Returning user with id ${id}`)
   const item = await User.findByPk(id);
+  if (item){
+    console.debug(`Returning user with id ${id}.`)
+  } else {
+    console.debug(`No user with id ${id}!`)
+  }
   res.send(item);
 });
 
