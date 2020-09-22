@@ -51,6 +51,8 @@ spec:
                   key: jwt
             - name: URL
               value: "http://localhost:8100"
+            - name: PORT
+              value: "8080"
         - name: udagram-user
           image: monikma/udagram-user
           resources:
@@ -87,3 +89,5 @@ spec:
                   key: jwt
             - name: URL
               value: "http://localhost:8100"
+            - name: PORT
+              value: "8081"
